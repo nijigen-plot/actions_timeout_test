@@ -23,4 +23,4 @@ jobs:
 
       # echoコマンドを打つ
       - name: call error
-        run: echo "0 / 0 | bc"
+        run: echo "0 / 0" | bc
