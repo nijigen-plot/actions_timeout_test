@@ -28,4 +28,6 @@ jobs:
 
       # echoコマンドを打つ
       - name: run zero divide py
-        run: python divide_zero.py
+        run: |
+          sleep 2m # timeout-minutesを超える時間sleepする
+          python divide_zero.py
