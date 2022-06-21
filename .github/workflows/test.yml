@@ -20,7 +20,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+        with:
+          ref: main
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
 
       # echoコマンドを打つ
-      - name: call error
-        run: echo "0 / 0" | bc
+      - name: run zero divide py
+        run: python divide_zero.py
